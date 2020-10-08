@@ -1,10 +1,12 @@
 import React from 'react'
 
-function SidebarRow({ title, Icon }) {
+function SidebarRow({ selected, title, Icon }) {
     return (
-        <div className="sidebar_row">
-            <Icon />
-            { title }
+        <div className={`sidebar_row ${selected && "selected"}`}>
+            <Icon className="sidebar_row_icon" />
+            <h2 className="sidebar_row_title">
+                {title}
+            </h2>
         </div>
     )
 }
