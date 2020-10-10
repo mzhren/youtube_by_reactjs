@@ -3,15 +3,31 @@ import './App.css';
 import Header from './Header';
 import Main from './Main';
 import Sidebar from './Sidebar';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import SearchPage from './SearchPage';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <div className="app__page">
-        <Sidebar />
-        <Main />
-      </div>
+      <Router>
+        <Header />
+        <Switch>
+
+          <Route path="/search/:query">
+            <div className="app__page">
+              <Sidebar />
+              <SearchPage />
+            </div>
+          </Route>
+
+          <Route path="/">
+            <div className="app__page">
+              <Sidebar />
+              <Main />
+            </div>
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
