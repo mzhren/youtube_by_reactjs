@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import { Menu, Search, VideoCall, Apps, Notifications } from '@material-ui/icons';
 import { Avatar } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-import Logo from './avatar.jpg';
+import userAvatar from './avatar.jpg';
+import Logo from './YouTube-logo.svg';
 
 
 
@@ -13,7 +14,7 @@ function Header() {
             <div className="header__left">
                 <Menu />
                 <Link to='/'>
-                    <img src="https://www.youtube.com/about/static/svgs/icons/brand-resources/YouTube-logo-full_color_light.svg?cache=72a5d9c" alt="APP Logo" className="app_logo" />
+                    <img src={Logo} alt="APP Logo" className="app_logo" />
                 </Link>
             </div>
 
@@ -31,7 +32,7 @@ function Header() {
                 <Apps />
                 <Notifications />
                 <Link to="/search/mzhren">
-                    <Avatar src={Logo} />
+                    <Avatar src={userAvatar} />
                 </Link>
             </div>
         </div>

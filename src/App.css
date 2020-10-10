@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body{
+  min-width: 960px;
+}
+
 .header{
   display: flex;
   align-items: center;
